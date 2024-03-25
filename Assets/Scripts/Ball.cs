@@ -27,7 +27,6 @@ public class Ball : Shape
             BallData playerBallData = player.GetBallData();
             if (ballData.IsSameColor(playerBallData))
             {
-                Debug.Log("Touch Player ");
                 player.TouchRightBall(this);
                 //Destroy
                 Broken();

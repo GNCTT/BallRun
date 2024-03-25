@@ -38,7 +38,6 @@ public class Player : MonoBehaviour
 
     public void TouchRightBall(Ball ball)
     {
-        Debug.Log("TouchRightBall");
         GameManager.Instance.AddPoint();
         var currentColor = ballData.ballColor;
         ChangePlayerColor(FindNextBallData());
@@ -64,13 +63,11 @@ public class Player : MonoBehaviour
         int randomNumber = Random.Range(1, listBallData.Count - 1);
         int index = (indexBallData + randomNumber) % (listBallData.Count);
         indexBallData = index;
-        Debug.Log("NewIndex: " + randomNumber);
         return listBallData[index];
     }
 
     public void TouchWrongBall()
     {
-        Debug.Log("TouchWrongBall");
         GameManager.Instance.MakeWrongMove();
     }
 

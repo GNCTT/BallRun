@@ -18,10 +18,6 @@ public class GameManager : MonoBehaviour
     {
         Instance = this;
     }
-    //private void Start()
-    //{
-    //    Setup();
-    //}
     public void StartGame(BallData ballData)
     {
         Setup(ballData);
@@ -43,7 +39,6 @@ public class GameManager : MonoBehaviour
     public void AddPoint()
     {
         point++;
-        Debug.Log("Add Point: " + point);
         CanvasManager.Instance.UpdatePoint(point);
         CheckWin();
     }
@@ -59,7 +54,6 @@ public class GameManager : MonoBehaviour
     public void MakeWrongMove()
     {
         lives--;
-        Debug.Log("Lives: " + lives);
         CheckLose();
     }
 
